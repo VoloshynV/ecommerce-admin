@@ -1,5 +1,10 @@
-import Image from 'next/image'
+import { UserButton } from '@clerk/nextjs'
 
 export default function Home() {
-  return <p>Hello Admin Dashboard</p>
+  return (
+    <div className=''>
+      <p>Hello Admin Dashboard</p>
+      <UserButton afterSignOutUrl='/' />
+    </div>
+  )
 }
