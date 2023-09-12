@@ -15,22 +15,27 @@ export const MainNav = ({
   const routes = [
     {
       href: `/${params.storeId}`,
-      label: "Overview",
+      label: "overview",
       active: pathname === `/${params.storeId}`,
     },
     {
       href: `/${params.storeId}/billboards`,
-      label: "Billboards",
+      label: "billboards",
       active: pathname === `/${params.storeId}/billboards`,
     },
     {
       href: `/${params.storeId}/categories`,
-      label: "Categories",
+      label: "categories",
       active: pathname === `/${params.storeId}/categories`,
     },
     {
+      href: `/${params.storeId}/sizes`,
+      label: "sizes",
+      active: pathname === `/${params.storeId}/sizes`,
+    },
+    {
       href: `/${params.storeId}/settings`,
-      label: "Settings",
+      label: "settings",
       active: pathname === `/${params.storeId}/settings`,
     },
   ];
@@ -42,7 +47,7 @@ export const MainNav = ({
           key={href}
           href={href}
           className={cn(
-            "text-sm font-medium transition-colors hover:text-primary",
+            "text-sm font-medium capitalize transition-colors hover:text-primary",
             active ? "text-black dark:text-white" : "text-muted-foreground",
           )}
         >
