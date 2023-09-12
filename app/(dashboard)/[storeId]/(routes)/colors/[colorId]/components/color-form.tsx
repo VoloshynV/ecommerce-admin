@@ -26,7 +26,10 @@ import { Separator } from "@/components/ui/separator";
 
 const formSchema = z.object({
   name: z.string().min(1),
-  value: z.string().min(1),
+  value: z
+    .string()
+    .min(4)
+    .regex(/^#([0-9a-f]{3}){1,2}$/i, "String must be a valid hex code"),
 });
 
 interface ColorFormProps {
