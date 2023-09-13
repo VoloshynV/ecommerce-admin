@@ -1,5 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 
+import { ENV } from "@/env";
+
 declare global {
   // eslint-disable-next-line unused-imports/no-unused-vars
   var prisma: PrismaClient | undefined;
@@ -7,6 +9,6 @@ declare global {
 
 const prismadb = globalThis.prisma || new PrismaClient();
 
-if (process.env.NODE_ENV !== "production") globalThis.prisma = prismadb;
+if (ENV.NODE_ENV !== "production") globalThis.prisma = prismadb;
 
 export default prismadb;
