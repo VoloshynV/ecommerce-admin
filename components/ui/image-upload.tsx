@@ -5,7 +5,7 @@ import Image from "next/image";
 import { CldUploadWidget } from "next-cloudinary";
 import { useEffect, useState } from "react";
 
-import { ENV } from "@/env";
+import { env } from "@/lib/env/client.mjs";
 
 import { Button } from "./button";
 
@@ -58,7 +58,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
       </div>
       <CldUploadWidget
         onUpload={onUpload}
-        uploadPreset={ENV.NEXT_PUBLIC_CLOUDINARY_PRESET_NAME}
+        uploadPreset={env.NEXT_PUBLIC_CLOUDINARY_PRESET_NAME}
       >
         {({ open }) => {
           const onClick = () => {

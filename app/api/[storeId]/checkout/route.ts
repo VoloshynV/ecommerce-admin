@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-import { ENV } from "@/env";
+import { env } from "@/lib/env/server.mjs";
 import prismadb from "@/lib/prismadb";
 import { stripe } from "@/lib/stripe";
 
@@ -76,8 +76,8 @@ export async function POST(
     phone_number_collection: {
       enabled: true,
     },
-    success_url: `${ENV.FRONTEND_URL}/cart?success=1`,
-    cancel_url: `${ENV.FRONTEND_URL}/cart?canceled=1`,
+    success_url: `${env.FRONTEND_URL}/cart?success=1`,
+    cancel_url: `${env.FRONTEND_URL}/cart?canceled=1`,
     metadata: {
       orderId: order.id,
     },
