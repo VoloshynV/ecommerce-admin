@@ -50,7 +50,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
     } catch (error) {
       console.error(error);
       toast.error(
-        "Make sure you removed all categories using this billboard first.",
+        "Make sure you removed all products using this category first.",
       );
     } finally {
       setIsLoading(false);
