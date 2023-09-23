@@ -12,7 +12,7 @@ interface OrdersPageProps {
   };
 }
 
-const OrderssPage = async ({ params }: OrdersPageProps) => {
+const OrdersPage = async ({ params }: OrdersPageProps) => {
   const orders = await prismadb.order.findMany({
     where: {
       storeId: params.storeId,
@@ -55,4 +55,4 @@ const OrderssPage = async ({ params }: OrdersPageProps) => {
   );
 };
 
-export default OrderssPage;
+export default OrdersPage;
