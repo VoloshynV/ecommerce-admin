@@ -15,6 +15,7 @@ export async function GET(
     const product = await prismadb.product.findUnique({
       where: {
         id: params.productId,
+        isDeleted: false,
       },
       include: {
         images: true,
@@ -161,9 +162,12 @@ export async function DELETE(
       return new NextResponse("Unauthorized", { status: 403 });
     }
 
-    const product = await prismadb.product.delete({
+    const product = await prismadb.product.update({
       where: {
         id: params.productId,
+      },
+      data: {
+        isDeleted: true,
       },
     });
 

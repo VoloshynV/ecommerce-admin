@@ -16,6 +16,7 @@ const ProductsPage = async ({ params }: ProductsPageProps) => {
   const products = await prismadb.product.findMany({
     where: {
       storeId: params.storeId,
+      isDeleted: false,
     },
     include: {
       category: true,
