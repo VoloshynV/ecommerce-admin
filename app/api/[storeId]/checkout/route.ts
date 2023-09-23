@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-import { env } from "@/lib/env/server.mjs";
 import prismadb from "@/lib/prismadb";
 import { stripe } from "@/lib/stripe";
 
@@ -25,6 +24,7 @@ export async function POST(
   { params }: { params: { storeId: string } },
 ) {
   const { productIds } = await req.json();
+  const frontendUrl = req.headers.get("origin");
 
   if (!productIds || productIds.length === 0) {
     return new NextResponse("Missing productIds", {
@@ -76,8 +76,8 @@ export async function POST(
     phone_number_collection: {
       enabled: true,
     },
-    success_url: `${env.FRONTEND_URL}/cart?success=1`,
-    cancel_url: `${env.FRONTEND_URL}/cart?canceled=1`,
+    success_url: `${frontendUrl}/cart?success=1`,
+    cancel_url: `${frontendUrl}/cart?canceled=1`,
     metadata: {
       orderId: order.id,
     },
