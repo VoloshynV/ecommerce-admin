@@ -1,6 +1,6 @@
 ## Project Overview
 
-Store CRM is an E-commerce project that I created to build an online store. I used NextJS, Tailwind, Zustand, Zod, RadixUi, ReactTable, Stripe to build this project.
+Store CRM is an E-commerce project that I created to build an online store. I used NextJS, PostgreSQL, Tailwind, Zustand, Zod, RadixUi, ReactTable, Stripe to build this project.
 
 ## Features
 
@@ -20,6 +20,9 @@ https://ecom-admin.voloshyn.pro/
 ## Technologies Used
 
 * Typescript
+* Clerk
+* Prisma
+* PostgreSQL
 * NextJS
 * Tailwind
 * Stripe
