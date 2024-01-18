@@ -1,9 +1,3 @@
----
-title: Store CRM
-subtitle: E-commerce
-date: 2023-09-11
----
-
 ## Project Overview
 
 Store CRM is an E-commerce project that I created to build an online store. I used NextJS, Tailwind, Zustand, Zod, RadixUi, ReactTable, Stripe to build this project.
