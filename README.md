@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
+title: Store CRM
+subtitle: E-commerce
+date: 2023-09-11
+---
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+Store CRM is an E-commerce project that I created to build an online store. I used NextJS, Tailwind, Zustand, Zod, RadixUi, ReactTable, Stripe to build this project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+* Creating Stores
+* Management Orders
+* Functionalities for Adding/Editing/Deleting Items
+* Creating and Management Categories/Filters
+* Management Billboards
+* Statistics Sales of Items
+* Sales Charts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Demo
 
-## Learn More
+https://ecom-admin.voloshyn.pro/
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Typescript
+* NextJS
+* Tailwind
+* Stripe
+* Zod
+* RadixUi
+* shadcn/ui
+* ReactTable
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Challenges
 
-## Deploy on Vercel
+Developed and implemented a payment processing system using Stripe for an e-commerce website.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Learnings
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Configuration Stripe to accept payments in multiple currencies and countries.
+
+Integrate Stripe with a website using an API.
+
+New NextJS with AppRouter
+
+## Conclusion
+
+Store CRM was a great learning experience for me. I learned a lot about Stripe, AppRouter and I am proud of what I created.
+
+I am also available for freelance work. Please contact me at riokin2011@gmail.com if you are interested in working with me.
